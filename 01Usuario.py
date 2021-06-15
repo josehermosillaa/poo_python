@@ -27,20 +27,28 @@ print(jose.name)
 
 guido.make_deposit(100)
 guido.make_deposit(200)
+guido.make_deposit(150)
+guido.make_withdrawal(350)
+print(guido.account_balance)
+
 monty.make_deposit(50)
-jose.make_deposit(1000)
+monty.make_deposit(500)
+monty.make_withdrawal(150)
 monty.make_withdrawal(320)
-guido.make_deposit(300)
+print(monty.account_balance)
+
+jose.make_deposit(1000)
 jose.make_withdrawal(350)
-print(guido.account_balance)	
-print(monty.account_balance)	
+jose.make_withdrawal(59)
+jose.make_withdrawal(1)
+print(jose.account_balance)
 
 
 guido.transfer_money(monty,1000)
 monty.transfer_money(jose,250)
-print(guido.account_balance)
+print(f"guido tiene {guido.account_balance} en su cuenta")
 guido.make_deposit(1000)
 print(guido.account_balance)
 monty.make_withdrawal(50)
-print(monty.account_balance) #deberia ser 1000 por el transfer
-print(jose.account_balance)
+print(f"monty: {monty.account_balance}") #deberia ser 1000 por el transfer
+print(f"jose :{jose.account_balance}")
