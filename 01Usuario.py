@@ -20,19 +20,27 @@ class User:
 
 guido = User("Guido van Rossum", "guido@python.com")
 monty = User("Monty Python", "monty@python.com")
+jose = User("Jose Hermosilla","jose.hermosilla@usach.cl")
 print(guido.name)	# salida: Guido van Rossum
 print(monty.name)	# salida: Monty Python
+print(jose.name)
 
 guido.make_deposit(100)
 guido.make_deposit(200)
 monty.make_deposit(50)
-print(guido.account_balance)	# salida: 300
-print(monty.account_balance)	# salida: 50
+jose.make_deposit(1000)
+monty.make_withdrawal(320)
+guido.make_deposit(300)
+jose.make_withdrawal(350)
+print(guido.account_balance)	
+print(monty.account_balance)	
 
 
 guido.transfer_money(monty,1000)
+monty.transfer_money(jose,250)
 print(guido.account_balance)
 guido.make_deposit(1000)
 print(guido.account_balance)
 monty.make_withdrawal(50)
 print(monty.account_balance) #deberia ser 1000 por el transfer
+print(jose.account_balance)
