@@ -49,16 +49,16 @@ class MathDojo:
             
 
 
+if __name__ == '__main__':
+    md = MathDojo()
+    # para probar:copy
+    x = md.add(2).add(2, 5, 1).subtract(3, 2)
+    md.desviacion_estandar()
+    md.verlista()
+    md1 = MathDojo()
+    y = md1.add(8).add(9,15,11).add(34,2)
+    # corre cada uno de los metodos algunos mas veces y valida el resultado!
 
-# md = MathDojo()
-# # para probar:copy
-# x = md.add(2).add(2, 5, 1).subtract(3, 2)
-# md.desviacion_estandar()
-# md.verlista()
-# md1 = MathDojo()
-# y = md1.add(8).add(9,15,11).add(34,2)
-# # corre cada uno de los metodos algunos mas veces y valida el resultado!
-
-# md2 = MathDojo()
-# z= md2.subtract(-3).subtract(0,5,4).subtract(-3,5,6,7)
+    md2 = MathDojo()
+    z= md2.subtract(-3).subtract(0,5,4).subtract(-3,5,6,7)
 
