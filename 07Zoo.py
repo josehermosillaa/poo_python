@@ -90,6 +90,6 @@ class Zoo:
 zoo1 = Zoo("John's Zoo")
 zoo1.add_lion("Nala")
 zoo1.add_lion("Simba")
-zoo1.add_penguin("Rajah")
-zoo1.add_penguin("Shere Khan")
+zoo1.add_penguin("Rey Julien")
+zoo1.add_penguin("Rico")
 zoo1.print_all_info()
