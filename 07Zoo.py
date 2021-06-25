@@ -2,14 +2,23 @@
 
 # En al menos una de las clases de Animal child que ha creado, agregue al menos un atributo único. Dele a cada animal diferentes niveles predeterminados de salud y felicidad. Los animales también deben responder al método de alimentación con diferentes 
 '''niveles de cambios en la salud y la felicidad'''
-
+import random
+def randint(min = 0, max = 100):
+    if min == 0:
+        num = round(max*(random.random()))
+        
+        return num
+    else:
+        num = round((max-min)*(random.random())+min)
+        
+        return num
 # Una vez que haya probado sus diferentes animales y se sienta más cómodo con la herencia, cree una clase de zoológico para ayudar a manejar a todos sus animales.
 class Animales:
-    def __init__(self, nombre, edad, nivel_salud, nivel_felicidad):
+    def __init__(self, nombre, edad,nivel_salud,nive_felicidad):
         self.nombre = nombre
         self.edad = edad
-        self.nivel_salud = nivel_salud
-        self.nivel_felicidad = nivel_felicidad
+        self.nivel_salud = randint()
+        self.nivel_felicidad = randint()
 
     def display_info(self):
         print(f'''
@@ -22,8 +31,14 @@ class Animales:
     
     def alimentar(self):
         print(f''' se esta alimentando a {self.name}, ñam ñam''')
-        self.nivel_salud += 10
-        self.nivel_felicidad += 10
+        if self.nivel_salud+10 >100:
+            self.nivel_salud = 100
+        else:
+            self.nivel_salud += 10
+        if self.nivel_felicidad+10>100:
+            self.nivel_felicidad = 100
+        else:
+            self.nivel_felicidad += 10
         print(f'''los nuevos parametros de {self.name} son''')
         self.display_info()
 
