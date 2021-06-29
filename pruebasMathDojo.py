@@ -1,4 +1,4 @@
-from mathdojo import MathDojo
+from .mathdojo import MathDojo
 import unittest
 md = MathDojo()
 md1 = MathDojo()
